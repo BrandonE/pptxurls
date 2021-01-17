@@ -156,7 +156,7 @@ def signal_exit(signal, frame):
     sys.exit(0)
 
 def md_escape(string):
-    return ' '.join(esc_format(string).replace("|", "\|").split())
+    return ' '.join(esc_format(string).replace("|", "\|").replace("$", "\$").split())
 
 def anchor_escape(string):
     return string.replace("[", "\[").replace("]", "\]")
